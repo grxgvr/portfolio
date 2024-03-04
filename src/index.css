@@ -1,0 +1,516 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: Streamster;
+    src: url("/fonts/Streamster.ttf");
+}
+
+@font-face {
+    font-family: Outrunner;
+    src: url("/fonts/AXROutrunner.ttf");
+}
+
+@font-face {
+    font-family: Laser;
+    src: url("/fonts/Lazer84.ttf");
+}
+
+@font-face {
+    font-family: Overdrive;
+    src: url("/fonts/Overdrive_Avenue.otf");
+}
+
+@font-face {
+    font-family: Hotliner;
+    src: url("/fonts/Hotliner-Third.otf");
+}
+
+@font-face {
+    font-family: Sunrise;
+    src: url("/fonts/EndlessSunriseRegular.ttf");
+}
+
+@font-face {
+    font-family: Retrofuturism;
+    src: url("/fonts/Retrofuturism.otf");
+}
+
+@font-face {
+    font-family: Gnome;
+    src: url("/fonts/Gnome.ttf");
+}
+
+@font-face {
+    font-family: Horseman;
+    src: url("/fonts/Horsemen (Demo Version).otf");
+}
+
+@font-face {
+    font-family: Midnight;
+    src: url("/fonts/The Midnight DEMO.otf");
+}
+
+@font-face {
+    font-family: VisbyCF;
+    src: url("/fonts/VisbyCFMedium.ttf");
+}
+
+@font-face {
+    font-family: Thunder;
+    src: url("/fonts/Thunderstorm.ttf");
+}
+
+@font-face {
+    font-family: Begaron;
+    src: url("/fonts/Begaron.ttf");
+}
+
+@font-face {
+    font-family: Alpharush;
+    src: url("/fonts/Alpharush.ttf");
+}
+@font-face {
+    font-family: PressStart;
+    src: url("/fonts/PressStart2P.ttf");
+}
+
+@font-face {
+    font-family: Arcade;
+    src: url("/fonts/AXR ArcadeMachine.ttf");
+}
+/* 
+@font-face {
+    font-family: OldSchoolAdventures;
+    src: url("/fonts/OldSchoolAdventures.ttf");
+} */
+
+@font-face {
+    font-family: PixeloidSans;
+    src: url("/fonts/PixeloidSans.ttf");
+}
+@font-face {
+    font-family: Vapor;
+    src: url("/fonts/Vaporfuturism.otf");
+}
+
+@font-face {
+    font-family: Phygital;
+    src: url("/fonts/phygital.otf");
+}
+@font-face {
+    font-family: Miamiglow;
+    src: url("/fonts/miamiglow.otf");
+}
+@font-face {
+    font-family: Cyberkish;
+    src: url("/fonts/cyberkish.otf");
+}
+@font-face {
+    font-family: Hauser;
+    src: url("/fonts/Hauser.otf");
+}
+
+@font-face {
+    font-family: Road;
+    src: url("/fonts/Road_Rage.otf");
+}
+@font-face {
+    font-family: Wolves;
+    src: url("/fonts/wolves.otf");
+}
+@font-face {
+    font-family: Wolves2;
+    src: url("/fonts/wolves2.otf");
+}
+:root {
+    /* font-family: 'Urbanist', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+    font-family: "VisbyCF", Inter, system-ui, Avenir, Helvetica, Arial,
+        sans-serif;
+    /* font-family: 'Orbitron', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+    /* font-family: 'Streamster'; */
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+:root::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* :root::-webkit-scrollbar {
+    display: none;
+} */
+
+/* a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+} */
+
+body {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+}
+
+button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+button:hover {
+    border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+}
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    /* z-index: 0; */
+}
+/* 
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
+
+.background-base {
+    /* background: #091120; */
+    /* background: repeating-linear-gradient(
+    0deg,
+    #0c192d,
+    #0c192d 5px,
+    #100d30 5px,
+    #100d30 10px
+  ); */
+
+    background: repeating-linear-gradient(
+        0deg,
+        #0b0923,
+        #0b0923 6px,
+        #100d30 6px,
+        #100d30 10px
+    );
+    /* background:#100d30; */
+}
+
+.background-base::after {
+    content: " ";
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    /* z-index: 10000; */
+    /* background: linear-gradient(to bottom, transparent, rgba(242, 64, 129, .5)); */
+    /* background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(242, 64, 129, 0.5)
+    ); */
+
+    background: linear-gradient(to bottom, black, rgba(242, 64, 129, 0.4));
+}
+
+.background-gradient {
+    /* background: linear-gradient(to bottom, transparent, #752240); */
+    /* background: linear-gradient(to bottom, transparent, #4f162b); */
+    /* background: linear-gradient(to bottom, #100d30, rgba(242, 64, 129, .5)); */
+
+    /* background: linear-gradient(to bottom, transparent, rgba(242, 64, 129, .5)); */
+}
+
+.canvas__title {
+    width: 100%;
+    background: "red";
+}
+
+.header__name {
+    background: linear-gradient(to bottom, transparent, #752240);
+    /* -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent; */
+}
+
+.navlink:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #f24081;
+    transition: transform 0.5s;
+    transform-origin: right;
+    transform: scaleX(0);
+    /* z-index: -1; */
+}
+
+.navlink:hover:before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.waves:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 2px #8338ec;
+}
+
+.waves:nth-child(2) {
+    color: #c19bf5;
+    animation: animate 4s ease-in-out infinite;
+}
+
+.cup {
+    position: relative;
+    background: white;
+    animation: filling 10s ease-in-out infinite;
+    /* box-shadow: 0 0 0 6px #fff, 0 20px 35px rgba(0, 0, 0, 1); */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(to bottom, white, blue);
+    /* background: transparent; */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cup:before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(to bottom, white, blue);
+    /* width: 50px; */
+    /* height: 80px; */
+    /* border: 6px solid #fff; */
+    /* background: -webkit-linear-gradient(#eee, #333); */
+    /* right: -57px; */
+    /* top: 30px; */
+    /* border-radius: "40% 60% 70% 30% / 45% 45% 50% 50%"; */
+}
+
+@keyframes filling {
+    0% {
+        /* transform: translate3d(1000px, 0, 0); */
+    }
+    100% {
+        /* transform: translate3d(85px, 0, 0); */
+    }
+}
+
+@keyframes wave {
+    0%,
+    100% {
+        clip-path: polygon(
+            0% 45%,
+            16% 44%,
+            33% 50%,
+            54% 60%,
+            70% 61%,
+            84% 59%,
+            100% 52%,
+            100% 100%,
+            0% 100%
+        );
+    }
+
+    50% {
+        clip-path: polygon(
+            0% 60%,
+            15% 65%,
+            34% 66%,
+            51% 62%,
+            67% 50%,
+            84% 45%,
+            100% 46%,
+            100% 100%,
+            0% 100%
+        );
+    }
+}
+
+/* "0%, 100%": {
+    "border-radius": "40% 60% 70% 30% / 45% 45% 50% 50%",
+    transform: "translate3d(0,0,0) rotateZ(0.01deg)",
+},
+"35%": {
+    "border-radius": "70% 30% 46% 54% / 30% 29% 71% 70%",
+    transform: "translate3d(0,5px,0) rotateZ(0.01deg)",
+},
+"50%": {
+    transform: "translate3d(0,0,0) rotateZ(0.01deg)",
+},
+"75%": {
+    "border-radius":
+        "100% 40% 40% 100% / 100% 100% 40% 40%",
+    transform: "translate3d(0,-3px,0) rotateZ(0.01deg)",
+}, */
+
+.loader {
+    --n: 7; /* control the number of stripes */
+    --s: 30px; /* control the width of stripes */
+    --g: 5px; /* control the gap between stripes */
+    display: block;
+    /* 
+    width: calc(var(--n) * (var(--s) + var(--g)) - var(--g));
+    height: 30px;
+    padding: var(--g);
+    margin: 5px auto;
+    border: 1px solid;
+    background: repeating-linear-gradient(
+            90deg,
+            currentColor 0 var(--s),
+            #0000 0 calc(var(--s) + var(--g))
+        )
+        left / calc((var(--n) + 1) * (var(--s) + var(--g))) 100% no-repeat
+        content-box;
+    animation: load 1.5s steps(calc(var(--n) + 1)) infinite; */
+}
+
+.loader[value] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 60%;
+    height: 40px;
+    padding: 6px 8px;
+    /* margin: 5px auto; */
+    box-sizing: border-box;
+    border: 1px solid;
+    background: transparent;
+}
+.loader[value]::-webkit-progress-bar {
+    background: transparent;
+}
+
+.loader[value]::-webkit-progress-value {
+    background: repeating-linear-gradient(
+        90deg,
+        currentColor,
+        currentColor 30px,
+        transparent 30px,
+        transparent 40px
+    );
+}
+
+.loader[value]::-moz-progress-bar {
+    background: repeating-linear-gradient(
+        90deg,
+        currentColor,
+        currentColor 30px,
+        transparent 30px,
+        transparent 40px
+    );
+}
+
+.progress[value] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 60%;
+    height: 40px;
+    padding: 6px 8px;
+    /* margin: 5px auto; */
+    box-sizing: border-box;
+    border: 1px solid;
+    background: transparent;
+}
+.progress[value]::-webkit-progress-bar {
+}
+
+.progress[value]::-webkit-progress-value,
+.progress[value]::-moz-progress-bar {
+    background: repeating-linear-gradient(
+        90deg,
+        currentColor,
+        currentColor 30px,
+        transparent 30px,
+        transparent 40px
+    );
+}
+
+/* --n: 10; */
+
+/* control the number of stripes */
+/* --s: 30px; */
+/* control the width of stripes */
+/* --g: 5px;  */
+/* control the gap between stripes */
+
+.dev {
+    -webkit-text-stroke: 4px currentColor;
+    -webkit-text-fill-color: transparent;
+
+    /* background: linear-gradient(to bottom, #3ab795, #0d1b30); */
+    /* background: -webkit-linear-gradient(white, #1d779a); */
+    /* -webkit-background-clip: text; */
+    /* -webkit-text-fill-color: transparent; */
+}
+
+.dev2 {
+    /* background: linear-gradient(to bottom, #3ab795, #f24081 70%); */
+    /* background: linear-gradient(to bottom, #fcc246, #f24081 60%); */
+    background: linear-gradient(to bottom, #fb8b24, #f24081 70%);
+    /* background: linear-gradient(to bottom, #3ab795, #1d779a 70%); */
+    /* background: -webkit-linear-gradient(white, #1d779a); */
+    -webkit-background-clip: text;
+    /* line-height: 1000px; */
+    min-height: 400px;
+    /* height: */
+    width: 100svw;
+    text-align: center;
+    height: fit-content;
+    /* box-sizing: border-box; */
+    /* width: 110%; */
+    overflow: visible;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    -webkit-text-fill-color: transparent;
+}
+
+.crosshair {
+    cursor: crosshair !important;
+}

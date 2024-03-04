@@ -1,0 +1,24 @@
+#aboutMe__surf:hover #aboutMe__surfGif {
+    opacity: 1;
+}
+
+#aboutMe__surf:hover {
+    background: linear-gradient(135deg, white, #1d779a);
+    /* background: -webkit-linear-gradient(white, #1d779a); */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.#aboutMe__surf {
+    transition-delay: 1000ms;
+    animation: gradient 5s ease-in-out infinite;
+}
+
+@keyframes gradient {
+    0% {
+        transform: translateX(100%) scale(0);
+    }
+    100% {
+        transform: translateX(0) scale(1);
+    }
+}
